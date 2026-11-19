@@ -1,0 +1,16 @@
+{
+    "name": "Frap.Startup",
+    "rootNamespace": "Frap",
+    "references": [
+        "GUID:11152119593af9e4f97714251fce5295"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
