@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Frap
 {
@@ -21,8 +22,9 @@ namespace Frap
         void Update()
         {
             float fov = cam.GetComponent<Camera>().fieldOfView;
-            float mouseX = Input.GetAxis("Mouse X") * (mouseSensitivity / (75 / fov)) * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * (mouseSensitivity / (75 / fov)) * Time.deltaTime;
+            Vector2 mouseDelta = Mouse.current.delta.ReadValue() * 0.1f;
+            float mouseX = mouseDelta.x * (mouseSensitivity / (75 / fov)) * Time.deltaTime;
+            float mouseY = mouseDelta.y * (mouseSensitivity / (75 / fov)) * Time.deltaTime;
 
             xRot -= mouseY;
             xRot = Mathf.Clamp(xRot, minXRot, maxXRot);

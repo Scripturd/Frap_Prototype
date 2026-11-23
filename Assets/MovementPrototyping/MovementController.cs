@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Frap
 {
@@ -29,8 +30,9 @@ namespace Frap
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
+            var kb = Keyboard.current;
+            float x = (kb.dKey.isPressed ? 1f : 0f) - (kb.aKey.isPressed ? 1f : 0f);
+            float z = (kb.wKey.isPressed ? 1f : 0f) - (kb.sKey.isPressed ? 1f : 0f);
             Vector3 moveDir = transform.right * x + transform.forward * z;
 
             // MOVE
@@ -38,7 +40,7 @@ namespace Frap
             Controller.Move(moveDir * speed * Time.deltaTime);
 
             // JUMP VELOCITY
-            if (Input.GetButtonDown("Jump") && isGrounded)
+            if (kb.spaceKey.wasPressedThisFrame && isGrounded)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
