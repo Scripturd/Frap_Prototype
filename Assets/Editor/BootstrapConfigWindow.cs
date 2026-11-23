@@ -37,7 +37,7 @@ namespace Frap
 
             if (EditorGUI.EndChangeCheck())
             {
-                Debug.Log($"StartupMode set to: {_selectedMode}");
+                //Debug.Log($"StartupMode set to: {_selectedMode}");
                 _selectedMode = selectedMode;
                 StartupConfig.StartupMode = _selectedMode;
 

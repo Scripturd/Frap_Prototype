@@ -10,6 +10,7 @@ namespace Frap
         {
             { "Default", "Default" },
             { "Movement Prototyping", "MovementPrototyping" },
+            { "AI Prototyping", "AiPrototyping" },
         };
 
         private void Awake()

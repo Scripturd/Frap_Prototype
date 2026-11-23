@@ -1,0 +1,17 @@
+{
+    "name": "Frap.AiPrototyping",
+    "rootNamespace": "Frap",
+    "references": [
+        "GUID:3aafedc59d6298e4ea3fb7e804a8c696",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
