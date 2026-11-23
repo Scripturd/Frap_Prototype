@@ -363,7 +363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Frap.MovementPrototyping::Frap.FPCamera
   cam: {fileID: 1546786198}
   player: {fileID: 847733996}
-  mouseSensitivity: 1250
+  mouseSensitivity: 75
   maxXRot: 90
   minXRot: -90
 --- !u!114 &847733998
